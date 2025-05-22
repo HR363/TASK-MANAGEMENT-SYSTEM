@@ -1,0 +1,21 @@
+{
+  "name": "task-management-system(typescript)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/readline-sync": "^1.4.8",
+    "@types/uuid": "^10.0.0"
+  }
+}
