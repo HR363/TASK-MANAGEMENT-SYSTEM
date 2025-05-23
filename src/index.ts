@@ -7,7 +7,7 @@ const taskService = new TaskService();
 
 function mainMenu() {
   while (true) {
-    console.log("\n=== USER & TASK MANAGEMENT SYSTEM ===");
+    console.log("\n=== TASK MANAGEMENT SYSTEM ===");
     console.log("1. Create User");
     console.log("2. List Users");
     console.log("3. Create Task");
