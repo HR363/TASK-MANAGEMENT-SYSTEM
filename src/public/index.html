@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User & Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User & Task Management System</h1>
+
+        <div class="main-content">
+            <section class="user-management">
+                <h2>User Management</h2>
+
+                <div class="card">
+                    <h3>Create New User</h3>
+                    <form id="createUserForm">
+                        <input type="text" id="userName" placeholder="Name" required>
+                        <input type="email" id="userEmail" placeholder="Email" required>
+                        <button type="submit">Create User</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>All Users</h3>
+                    <ul id="userList" class="data-list">
+                        </ul>
+                </div>
+            </section>
+
+            <section class="task-management">
+                <h2>Task Management</h2>
+
+                <div class="card">
+                    <h3>Create New Task</h3>
+                    <form id="createTaskForm">
+                        <input type="text" id="taskTitle" placeholder="Task Title" required>
+                        <textarea id="taskDescription" placeholder="Task Description" rows="3"></textarea>
+                        <button type="submit">Create Task</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Assign/Unassign Task</h3>
+                    <form id="assignTaskForm">
+                        <label for="assignTaskId" class="visually-hidden">Select Task</label>
+                        <select id="assignTaskId" class="select-field" required>
+                            <option value="">Select Task</option>
+                        </select>
+                        <label for="assignUserId" class="visually-hidden">Select User</label>
+                        <select id="assignUserId" class="select-field" required title="Select User">
+                            <option value="">Select User</option>
+                        </select>
+                        <button type="submit">Assign Task</button>
+                    </form>
+                    <form id="unassignTaskForm" style="margin-top: 10px;">
+                        <label for="unassignTaskId" class="visually-hidden">Select Task to Unassign</label>
+                        <select id="unassignTaskId" class="select-field" required title="Select Task to Unassign">
+                            <option value="">Select Task to Unassign</option>
+                        </select>
+                        <button type="submit">Unassign Task</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>View Tasks by User</h3>
+                    <form id="viewTasksByUserForm">
+                        <label for="viewTasksUserId" class="visually-hidden">Select User to View Tasks</label>
+                        <select id="viewTasksUserId" class="select-field" required title="Select User to View Tasks">
+                            <option value="">Select User</option>
+                        </select>
+                        <button type="submit">View Tasks</button>
+                    </form>
+                    <ul id="tasksByUserList" class="data-list">
+                        </ul>
+                </div>
+
+                <div class="card">
+                    <h3>All Tasks</h3>
+                    <ul id="taskList" class="data-list">
+                        </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="./index.ts"></script>
+</body>
+</html>
